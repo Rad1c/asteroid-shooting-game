@@ -1,0 +1,27 @@
+﻿<Window x:Class="RocketGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rocket Game" Height="650" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Canvas Name="mainCanvas" Focusable="True" KeyDown="mainCanvas_KeyDown" KeyUp="mainCanvas_KeyUp"> 
+        <Rectangle Name="rctgPlayer1" Height="50" Width="36" Fill="Red" Canvas.Left="432" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Top="535" />
+        <Label Content="0" Foreground="#FFBBBBBB" FontSize="20" FontWeight="Bold" Height="auto" Name="lblScore" HorizontalAlignment="Right" VerticalAlignment="Top" Canvas.Left="663" Canvas.Top="17" Target="{Binding}" Width="127" HorizontalContentAlignment="Right" Panel.ZIndex="999" />
+        <Rectangle Name="rctgPlayer2" Height="50" Width="36" Fill="Red" Canvas.Left="450" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Top="535" />
+        <Image Canvas.Left="847" Canvas.Top="26" Height="20" Name="hart1" Stretch="Fill" Width="20" Source="/RocketGame;component/Images/hart.png" Panel.ZIndex="999" />
+        <Image Canvas.Left="822" Canvas.Top="26" Height="20" Name="hart2" Stretch="Fill" Width="20" Source="/RocketGame;component/Images/hart.png" Panel.ZIndex="999" />
+        <Image Canvas.Left="795" Canvas.Top="26" Height="20" Name="hart3" Stretch="Fill" Width="20" Source="/RocketGame;component/Images/hart.png" Panel.ZIndex="999" />
+        <Label Canvas.Left="375" FontFamily="Agency FB" Canvas.Top="12" Content="HI-SCORE" Height="auto" Foreground="#b49a03" FontSize="25" FontWeight="ExtraBold" Name="lblHighScore" Width="150" HorizontalContentAlignment="Center" Panel.ZIndex="999" />
+        <Label Canvas.Left="375" FontSize="15" FontWeight="Bold" Canvas.Top="45" Content="999" Height="28" Name="lblHiScore" Width="150" HorizontalContentAlignment="Center" Panel.ZIndex="999" Foreground="#FFBBBBBB" />
+        <Image Canvas.Left="12" Canvas.Top="26" Height="20" Name="player2Hart3" Source="/RocketGame;component/Images/hart.png" Stretch="Fill" Width="20" Panel.ZIndex="999" />
+        <Image Canvas.Left="39" Canvas.Top="26" Height="20" Name="player2Hart2" Source="/RocketGame;component/Images/hart.png" Stretch="Fill" Width="20" Panel.ZIndex="999" />
+        <Image Canvas.Left="64" Canvas.Top="26" Height="20" Name="player2Hart1" Source="/RocketGame;component/Images/hart.png" Stretch="Fill" Width="20" Panel.ZIndex="999" />
+        <Label Canvas.Left="90" Canvas.Top="17" Content="0" FontSize="20" FontWeight="Bold" Foreground="#FFBBBBBB" Height="auto" HorizontalContentAlignment="Left" Name="lblScore1" Target="{Binding}" Width="127" Panel.ZIndex="999" />
+        <Label Canvas.Left="200" FontFamily="Agency FB" FontWeight="Heavy" Foreground="#b49a03" Width="500" FontSize="32" Height="50" Canvas.Top="450" Content="Press SPACE to start the Game"  Name="lblStartGame" Panel.ZIndex="999" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Canvas.Left="200" Foreground="#bbbbbb" FontWeight="Heavy" Canvas.Top="188" Content="Left and Right arrow keys to move" FontFamily="Agency FB" FontSize="20" Name="label1" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="200" Canvas.Top="251" Content="Space bar to shoot meteors" FontFamily="Agency FB" Foreground="#bbbbbb" FontSize="20" FontWeight="Heavy" Name="label2" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="200" Canvas.Top="314" Content="Press S for second player" FontSize="25" FontFamily="Agency FB" Foreground="#bbbbbb" FontWeight="ExtraBold" Name="label3" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="200" FontFamily="Agency FB" FontSize="20" Foreground="#bbbbbb" FontWeight="Heavy" Canvas.Top="386" Content="A and D to move second rocket, S to shoot"  Name="label4" HorizontalAlignment="Center" Width="500" HorizontalContentAlignment="Center" />
+        <Canvas.Background>
+            <ImageBrush />
+        </Canvas.Background>
+    </Canvas>
+</Window>

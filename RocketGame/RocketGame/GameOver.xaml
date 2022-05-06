@@ -1,0 +1,33 @@
+﻿<Window x:Class="RocketGame.GameOver"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GameOver" Height="344" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Border BorderBrush="#bbbbbb" BorderThickness="1">    
+        <Grid Name="grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="/RocketGame;component/Images/background.png" Stretch="Fill" TileMode="Tile" Viewport="0,0,230.400468750954,345.60070312643" ViewportUnits="Absolute" />
+            </Grid.Background>
+            <Label Content="GAME OVER" FontWeight="DemiBold" Width="360" Height="80" FontFamily="Agency FB" FontSize="45" Foreground="#b49a03"  Name="label1" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="3" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Margin="39,0" MouseLeftButtonDown="label1_MouseLeftButtonDown" />
+            <Label FontWeight="Heavy" Content="Player 1: " Grid.ColumnSpan="2" Foreground="#FFC8C8C9" FontSize="23" FontFamily="Agency FB" Grid.Row="1"  HorizontalAlignment="Right" Margin="0,0,20,0" Name="lbl1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" VerticalAlignment="Center" />
+            <Label FontWeight="Heavy" Content="Player 2: " Grid.ColumnSpan="2" Foreground="#FFC8C8C9" FontSize="23" FontFamily="Agency FB" Grid.Row="2"  HorizontalAlignment="Right" Margin="0,0,20,0" Name="lbl2" VerticalContentAlignment="Center"/>
+            <Label FontWeight="Heavy" Content="Highscore: " Grid.ColumnSpan="2" Foreground="#FFC8C8C9" FontSize="23" FontFamily="Agency FB" Grid.Row="3"  HorizontalAlignment="Right" Margin="0,0,20,0" Name="lbl3" VerticalContentAlignment="Center"/>
+            <Button Content="Exit" FontWeight="Heavy" Grid.Row="4" Foreground="#FFC8C8C9" FontFamily="Agency FB" FontSize="18" Background="#606f80" Height="30" HorizontalAlignment="Right" Margin="0,30,25,0" Name="btnExit" VerticalAlignment="Top" Width="90" BorderThickness="0" Click="btnExit_Click" />
+            <Button Background="#b49a03" FontWeight="Heavy" Content="Retry" FontFamily="Agency FB" FontSize="18" Foreground="#FFC8C8C9" Height="30" HorizontalAlignment="Left" Margin="25,30,0,0" Name="btnRetry" VerticalAlignment="Top" Width="90" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" BorderThickness="0" Click="btnRetry_Click" />
+            <Label Content="999" FontWeight="Heavy" Grid.Column="2" Grid.Row="1"   Name="lblValue1" Foreground="#FFC8C8C9" FontSize="23" Margin="-15, 0, 0, 0" FontFamily="Agency FB"  HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+            <Label Content="999" FontWeight="Heavy" Grid.Column="2" Grid.Row="2"   Name="lblValue2" Foreground="#FFC8C8C9" FontSize="23" Margin="-15, 0, 0, 0" FontFamily="Agency FB"  HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+            <Label Content="999" FontWeight="Heavy" Grid.Column="2" Grid.Row="3"   Name="lblValue3" Foreground="#FFC8C8C9" FontSize="23" Margin="-15, 0, 0, 0" FontFamily="Agency FB"  HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+        </Grid>
+    </Border>
+</Window>
